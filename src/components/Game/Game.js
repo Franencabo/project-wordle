@@ -3,7 +3,7 @@ import React from "react";
 import { sample } from "../../utils";
 import { WORDS } from "../../data";
 import GuessInput from "../GuessInput/GuessInput";
-import Guesses from "../Guesses/Guesses";
+import Guesses from "../GuessResults/GuessesResults";
 
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
