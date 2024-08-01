@@ -9,6 +9,7 @@ function Cell({ letter, status }) {
 
 function Guess({ value, answer }) {
   const result = checkGuess(value, answer);
+  const isCorrect = result && result.every((cell) => cell.status === "correct");
 
   return (
     <p className="guess">
@@ -17,6 +18,7 @@ function Guess({ value, answer }) {
           key={num}
           letter={result ? result[num].letter : undefined}
           status={result ? result[num].status : undefined}
+          isCorrect={isCorrect}
         />
       ))}
     </p>
